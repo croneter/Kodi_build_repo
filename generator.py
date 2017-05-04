@@ -64,7 +64,7 @@ class Generator:
                     self._generate_md5_file(root, file)
         # closing tag
         with open(self.addons_xml, 'ab') as f:
-            f.write(r'''</addons>'''.encode('utf-8'))
+            f.write('</addons>\n'.encode('utf-8'))
         # MD5 of the generated addons.xml itself
         self._generate_md5_file(self.cwd, 'addons.xml')
 
